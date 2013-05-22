@@ -1,0 +1,5 @@
+package abc.graphs.adjacencyList;
+
+public class AdjacencyList {
+
+}

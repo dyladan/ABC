@@ -1,0 +1,9 @@
+package abc.graphs.adjacencyList;
+
+public class Vertex {
+	
+	public Vertex() {
+		
+	}
+
+}
