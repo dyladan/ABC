@@ -79,21 +79,21 @@ end
 require 'yaml'
 start = Time.now
 
-#tree = BinarySearchTree.new()
-hash = {}
+tree = BinarySearchTree.new()
 
 (0..100000).each do |x|
   random = rand(100000)
-#  tree.add(random, "asdfasdf")
-  hash.store(random, "asdfasdf" )
+  #tree.add(random, ('a'..'z').to_a.shuffle[0,8].join)
+  tree.add(random, (0...8).map{(65+rand(26)).chr}.join)
 end
 
 middle = Time.now
 
-#print tree.find(100).data.to_s + "\n"
-print hash.fetch(100).to_s + "\n"
+print tree.find(100).data.to_s + "\n"
 
 stop = Time.now
+
+print tree.to_yaml
 
 print "Time to populate tree: #{middle - start}\n"
 print "Time to search tree: #{stop - middle}\n"
